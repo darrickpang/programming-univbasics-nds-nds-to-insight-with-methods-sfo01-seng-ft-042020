@@ -7,11 +7,10 @@ def gross_for_director(director_data)
   result = {}
   x = 0 
   while x < director_data.length do
-    direct = director_data[x][:name]
-    result[direct] = 0
+    result[director_data[x][:name]] = 0
     y = 0
     while y < director_data[x][:movies].length do
-      result[direct] += director_data[x][:movies][y][:worldwide_gross]
+      result[director_data[x][:name]] += director_data[x][:movies][y][:worldwide_gross]
       y+= 1
     end
     x += 1
