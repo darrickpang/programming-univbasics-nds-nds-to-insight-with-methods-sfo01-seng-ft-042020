@@ -6,12 +6,12 @@ require 'directors_database'
 def gross_for_director(director_data)
   sum = 0
   x = 0
-@@ -20,24 +24,31 @@ def gross_for_director(d)
-    total += d[:movies][index][:worldwide_gross]
-    index += 1
+
+    sum += director_data[:movies][x][:worldwide_gross]
+    x += 1
   end
 
-  total
+  return sum
 end
 
 # Write a method that, given an NDS creates a new Hash
